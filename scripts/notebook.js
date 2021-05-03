@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', init);
 
-let title, notes, clearBtn;
+let title, notes, clearButton;
 
 function init()
 {
     title = document.getElementById('title');
     notes = document.getElementById('notes');
-    clearBtn = document.getElementById('clearButton');
+    clearButton = document.getElementById('clearButton');
 
     title.oninput = () => saveToLS('title', title.value);
     notes.oninput = () => saveToLS('notes', notes.value);
-    clearBtn.addEventListener('click', clear);
+    clearButton.addEventListener('click', clear);
 
     title.value = getFromLS('title');
     notes.value = getFromLS('notes');
