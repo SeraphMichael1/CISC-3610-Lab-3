@@ -6,12 +6,12 @@ function init()
     notes = notebook.getElementById('notes');
     clearButton = notebook.getElementById('clearButton');
 
-    title.oninput = () => saveToLS('title', title.value);
-    notes.oninput = () => saveToLS('notes', notes.value);
+    title.oninput = () => saveLocal('title', title.value);
+    notes.oninput = () => saveLocal('notes', notes.value);
     clearButton.addEventListener('click', clear);
 
-    title.value = getFromLS('title');
-    notes.value = getFromLS('notes');
+    title.value = getLocal('title');
+    notes.value = getLocal('notes');
 }
 function saveLocal(key, value)
 {
