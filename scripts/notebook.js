@@ -1,10 +1,10 @@
-notebook.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', init);
 let title, notes, clearButton;
 function init()
 {
-    title = notebook.getElementById('title');
-    notes = notebook.getElementById('notes');
-    clearButton = notebook.getElementById('clearButton');
+    title = document.getElementById('title');
+    notes = document.getElementById('notes');
+    clearButton = document.getElementById('clearButton');
 
     title.oninput = () => saveLocal('title', title.value);
     notes.oninput = () => saveLocal('notes', notes.value);
