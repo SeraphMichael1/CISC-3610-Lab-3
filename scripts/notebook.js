@@ -22,8 +22,8 @@ function getLocal(key)
     let ls;
     if(localStorage)
     {
-        try { ls = localStorage.getItem(key) || ''; }
-        catch(e) { console.error(e); }
+        try {ls=localStorage.getItem(key) || '';}
+        catch(e){console.error(e);}
     }
     return ls;
 }
